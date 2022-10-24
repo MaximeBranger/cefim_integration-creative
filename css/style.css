@@ -92,6 +92,35 @@ a {
     align-items: center;
     height: 11rem;
     margin-inline: 2.4rem;
+    position: relative;
+}
+
+.navbar-list {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    padding-block: 3rem;
+    background-color: var(--second-bg);
+    width: 25.2rem;
+    right: 0;
+    bottom: 0;
+    transform: translateY(calc(100% + 1.5rem));
+    text-align: center;
+}
+
+.navbar-item {
+    padding-block-end: 2.4rem;
+}
+
+.navbar-item:has(.button) {
+    padding-block-start: 2.4rem; 
+}
+
+.navbar-link {
+    color: var(--second-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3.2rem;
 }
 
 .logo {
@@ -111,9 +140,80 @@ a {
     margin-block-end: 1.5rem;
 }
 
-/* ACCROCHE */
+@media (min-width: 768px) {
+    .main-header {
+        display: grid;
+        grid-template-columns: 33fr 43.8fr;
+        grid-template-rows: 17.8rem 1fr;
+        margin: 0;
+    }
 
-.accroche {
+    .navbar {
+        height: auto;
+    }
+
+    .burger-menu-link {
+        display: none;
+    }
+
+    .navbar-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: initial;   
+        width: auto;
+        right: auto;
+        bottom: auto;
+        transform: none;
+        align-items: center;
+        margin: 0;
+        background-color: var(--third-bg);
+    }
+
+    .navbar-item {
+        margin: auto;
+        padding: 0;
+    }
+
+    .navbar-item:has(.button) {
+        padding-block-start: 0; 
+    }
+
+    .navbar-link.button {
+        background-color: var(--black);
+        padding: 1rem;
+    } 
+
+    .hero {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        max-width: 40rem;
+        padding-block-start: 7.7rem;
+        padding-inline-start: 4rem;
+    }
+
+    .hero-img {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        order: -1;
+        justify-self: end;
+        margin: 0;
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+}
+
+
+/* ACCROCHE BRAND */
+
+.accroche-brand {
     background-color: var(--second-bg);
     color: var(--second-color);
 }
@@ -133,12 +233,19 @@ a {
     border-bottom: 1px solid var(--third-color);
 }
 
-/* BRAND */
-
-.brand {
+.brand-title-bloc,
+.brand-content {
     background-color: var(--third-bg);
     color: var(--second-color);
-    padding: 9.6rem 2.4rem;
+}
+
+.brand-title-bloc {
+    padding-block-start: 9.6rem;
+    padding-inline: 2.4rem;
+}
+
+.brand-content {
+    padding: 2.4rem;
 }
 
 .brand-list {
@@ -174,8 +281,62 @@ a {
     line-height: 2.5rem;
 }
 
+@media (min-width: 768px) {
+    .accroche-brand {
+        display: grid;
+        grid-template-columns: 37.8rem 1fr 39rem;
+        grid-template-rows: 53.8rem 12rem 1fr;
+    }
+
+    .content-img {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        order: 2;
+    }
+
+    .accroche-content {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .brand-title-bloc {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;    
+        background-color: var(--second-bg);
+    }
+
+    .brand-content {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        order: 5;
+    }
+
+    .brand-content,
+    .brand-title-bloc {
+        padding-block-start: 12rem;
+    }
+
+    .brand-title {
+        padding-block-start: 12.6rem;
+        padding-inline-start: 3.9rem;
+    }
+
+    .accroche-content,
+    .brand-list {
+        padding-inline-start: 3.9rem;
+    }
+}
+
 /* CAROUSSEL */
-.caroussel {
+.caroussel-legend, .caroussel-figure {
     background-color: var(--second-bg);
     color: var(--second-color);
 }
@@ -226,6 +387,29 @@ a {
     order: -1;
 }
 
+@media (min-width: 768px) {
+    .caroussel {
+        display: grid;
+        grid-template-columns: 33rem 1fr 37.8rem;
+        grid-template-rows: 352fr 120fr;
+    }
+
+    .caroussel-figure {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;      
+        order: 1;
+    }
+
+    .caroussel-legend {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;     
+    }
+}
+
 /* SCHEDULE */
 .schedule {
     padding-block: 10rem;
@@ -234,4 +418,16 @@ a {
 
 .schedule-title {
     padding-block-end: 4.2rem;
+}
+
+
+@media (min-width: 768px) {
+    .schedule {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .schedule-button {
+        margin: auto;
+    }
 }
