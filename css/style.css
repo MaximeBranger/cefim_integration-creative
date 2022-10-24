@@ -1,0 +1,237 @@
+/* commissioner-regular - latin */
+@font-face {
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/commissioner-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/commissioner-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* commissioner-800 - latin */
+  @font-face {
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 800;
+    src: local(''),
+         url('../fonts/commissioner-v13-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/commissioner-v13-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+html {
+    --red: #F94F4F;
+    --light-black: #191921;
+    --black: #000;
+    --white: #FFF;
+
+    --main-color: var(--black);
+    --second-color: var(--white);
+    --third-color: var(--red);
+    --main-bg: var(--white);
+    --second-bg: var(--light-black);
+    --third-bg: var(--red);
+
+}
+
+body {
+	font-family: 'Commissioner', sans-serif;
+	font-size: 1.5rem;
+    font-weight: 400;
+	line-height: 2.5rem;
+	color: var(--black);
+	background-color: var(--white);
+}
+
+h1, h2 {
+    line-height: 4rem;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-block-end: 4rem;
+}
+
+a {
+    font-weight: 800;
+    line-height: 1.8rem;
+    color: var(--third-color);
+    text-decoration: none;
+    position: relative;
+}
+
+.button {
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    padding: 2.5rem 4rem;
+    background-color: var(--red);
+    color: var(--white);
+    border: 0;
+}
+
+
+/* HEADER */
+.main-header {
+    margin-block-end: 9.6rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 11rem;
+    margin-inline: 2.4rem;
+}
+
+.logo {
+    width: 16.1rem;
+    height: 3.1rem;
+}
+
+.hero-img {
+    margin-block-end: 5.6rem;
+}
+
+.hero {
+    margin-inline: 2.4rem;
+}
+
+.main-title {
+    margin-block-end: 1.5rem;
+}
+
+/* ACCROCHE */
+
+.accroche {
+    background-color: var(--second-bg);
+    color: var(--second-color);
+}
+
+.accroche-content {
+    margin-inline: 2.4rem;
+    padding-block: 7.2rem;
+}
+
+
+.content-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: -.9rem;
+    left: 0;
+    border-bottom: 1px solid var(--third-color);
+}
+
+/* BRAND */
+
+.brand {
+    background-color: var(--third-bg);
+    color: var(--second-color);
+    padding: 9.6rem 2.4rem;
+}
+
+.brand-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8.4rem;
+    padding-block-start: 4.9rem;
+    counter-reset: my-counter;
+}
+
+.brand-item {
+    counter-increment: my-counter;
+}
+
+.item-title {
+    margin-block-end: 1.5rem;
+    position: relative;
+}
+
+.item-title::after {
+    content: '0'counter(my-counter);
+    position: absolute;
+    font-size: 8rem;
+    line-height: 8.8rem;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    left: -5%;
+    bottom: -50%;
+}
+
+.brand p {
+    margin: 0;
+    line-height: 2.5rem;
+}
+
+/* CAROUSSEL */
+.caroussel {
+    background-color: var(--second-bg);
+    color: var(--second-color);
+}
+
+.caroussel-figure {
+    display: grid;
+}
+
+.caroussel-title {
+    grid-row: 2;
+    padding: 6.4rem 2.4rem 2.4rem 2.4rem;
+}
+
+.caroussel-buttons {
+    padding-inline: 2.4rem;
+    padding-block-end: 6.4rem;
+}
+
+.caroussel-button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+    color: var(--third-color);
+    border: 1px solid var(--third-color);
+    background: none;
+    margin-inline-end: 1.6rem;
+}
+
+.caroussel-img,
+.caroussel-content {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: end;
+    justify-self: end;
+}
+
+.caroussel-content {
+    text-align: right;
+    padding-inline-end: 3.2rem;
+    padding-block-end: 3.5rem;
+}
+
+.caroussel-img-content {
+    margin: 0;
+}
+
+.caroussel-img {
+    order: -1;
+}
+
+/* SCHEDULE */
+.schedule {
+    padding-block: 10rem;
+    padding-inline: 2.4rem; 
+}
+
+.schedule-title {
+    padding-block-end: 4.2rem;
+}
