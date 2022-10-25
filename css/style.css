@@ -128,7 +128,7 @@ a {
     height: 3.1rem;
 }
 
-.hero-img {
+.hero-picture {
     margin-block-end: 5.6rem;
 }
 
@@ -194,7 +194,7 @@ a {
         padding-inline-start: 4rem;
     }
 
-    .hero-img {
+    .hero-picture {
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 2;
@@ -214,15 +214,15 @@ a {
 /* ACCROCHE BRAND */
 
 .accroche-brand {
-    background-color: var(--second-bg);
+    /* background-color: var(--second-bg); */
     color: var(--second-color);
 }
 
 .accroche-content {
-    margin-inline: 2.4rem;
+    padding-inline: 2.4rem;
     padding-block: 7.2rem;
+    background-color: var(--second-bg);
 }
-
 
 .content-link::after {
     content: '';
@@ -231,6 +231,10 @@ a {
     bottom: -.9rem;
     left: 0;
     border-bottom: 1px solid var(--third-color);
+}
+
+.content-img {
+    width: 100%;
 }
 
 .brand-title-bloc,
@@ -284,11 +288,11 @@ a {
 @media (min-width: 768px) {
     .accroche-brand {
         display: grid;
-        grid-template-columns: 37.8rem 1fr 39rem;
+        grid-template-columns: 37.8fr 4.8fr 39fr;
         grid-template-rows: 53.8rem 12rem 1fr;
     }
 
-    .content-img {
+    .content-picture {
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 1;
@@ -307,8 +311,11 @@ a {
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 2;
-        grid-row-end: 3;    
-        background-color: var(--second-bg);
+        grid-row-end: 3;
+    }
+
+    .brand-title {
+        padding: 0;
     }
 
     .brand-content {
@@ -325,6 +332,7 @@ a {
     }
 
     .brand-title {
+        color: var(--main-color);
         padding-block-start: 12.6rem;
         padding-inline-start: 3.9rem;
     }
@@ -337,12 +345,16 @@ a {
 
 /* CAROUSSEL */
 .caroussel-legend, .caroussel-figure {
-    background-color: var(--second-bg);
     color: var(--second-color);
+}
+
+.caroussel-legend {
+    background-color: var(--second-bg);
 }
 
 .caroussel-figure {
     display: grid;
+    width: 100%;
 }
 
 .caroussel-title {
@@ -365,7 +377,7 @@ a {
     margin-inline-end: 1.6rem;
 }
 
-.caroussel-img,
+.caroussel-picture,
 .caroussel-content {
     grid-row: 1;
     grid-column: 1;
@@ -399,7 +411,7 @@ a {
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 3;      
-        order: 1;
+        order: -1;
     }
 
     .caroussel-legend {
