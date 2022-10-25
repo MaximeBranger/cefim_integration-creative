@@ -1,5 +1,6 @@
 /* commissioner-regular - latin */
 @font-face {
+    display: swap;
     font-family: 'Commissioner';
     font-style: normal;
     font-weight: 400;
@@ -9,6 +10,7 @@
   }
   /* commissioner-800 - latin */
   @font-face {
+    display: swap;
     font-family: 'Commissioner';
     font-style: normal;
     font-weight: 800;
@@ -39,7 +41,8 @@ body {
 	line-height: 2.5rem;
 	color: var(--black);
 	background-color: var(--white);
-    max-width: 144rem;
+    /* max-width: 144rem; */
+    max-width: 76.8rem;
     margin: auto;
 }
 
